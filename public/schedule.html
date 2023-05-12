@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/schedule.css">
+</head>
+
+<body>
+    <div class="toast-zone"></div>
+
+    <div class="confirm-zone" style="display: none;">
+        <div id="confirm-box">
+            <p>Bạn có muốn xóa các lớp học không?<br>Điều này không thể hoàn tác.</p>
+            <button name="No" class="btn-confirm" id="confirm-no">No</button>
+            <button name="Yes" class="btn-confirm" id="confirm-yes">Yes</button>
+        </div>
+    </div>
+
+    <div id="left-panel">
+        <div class="left-container">
+            <form onsubmit="return false" id="form" class="search">
+                <div class="form-group">
+                    <select name="courseYear" id="cboNamHoc1" class="form-control">
+                        <option value="" disabled selected>--Chọn Năm học--</option>
+                    </select>
+                    <select name="semester" id="cboHocKy1" class="form-control">
+                        <option value="" disabled selected>--Chọn Học kỳ--</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select name="subject" id="cboCourse" class="form-control">
+                        <option value="" disabled selected>--Chọn Môn học--</option>
+                    </select>
+                    <input name="courseCode" type="text" class="form-control" value="  Nhập Mã số Môn..."
+                        onblur="if(this.value=='') this.value='  Nhập Mã số Môn...';"
+                        onfocus="if(!this.value=='') this.value='';" name="frm_num" id="keyword1">
+                </div>
+                <div class="form-group form-group-button">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Tìm kiếm</button>
+                </div>
+            </form>
+            <div class="left-function">
+                <div class="btn-zone"></div>
+            </div>
+        </div>
+        <div id="course-list"></div>
+    </div>
+
+    <div id="right-panel"></div>
+    <script src="../js/schedule.js"></script>
+    <script></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>My Schedule</title>
+</head>
+
+<body>
+    <div class="toast-zone"></div>
+    <div class="wrapper">
+        <div class="header">
+            <nav class="nav-bar">
+                <div class="nav-left">
+                    <div class="logo"><img src="../images/Schedule.png" alt=""></div>
+                    <div class="site-name">My Schedule</div>
+                </div>
+                <div class="nav-right">
+                    <%if ( status==="loggedIn" ){%>
+                        <div class="nav-menu">
+                            <div class="menu-items">
+                                <a href="">Trang chủ</a>
+                            </div>
+                            <div class="menu-items">
+                                <a href="">Hướng dẫn sử dụng</a>
+                            </div>
+                            <div class="menu-items xep-lich">
+                                <a href="/schedule">Xếp lịch học</a>
+                            </div>
+                        </div>
+                        <% } else { %>
+                            <div class="nav-menu">
+                                <div class="menu-items">
+                                    <a href="">Trang chủ</a>
+                                </div>
+                                <div class="menu-items">
+                                    <a href="">Hướng dẫn sử dụng</a>
+                                </div>
+                            </div>
+                            <% } %>
+                </div>
+            </nav>
+        </div>
+        <main class="main">
+            <div class="left-panel">
+                <div class="title" style="display: flex;">
+                    <div class="title-item" style="margin: auto; display: flex;">
+                        <!-- <%if ( status==="loggedIn" ){%>
+                            <h1 class="wc-username">Chào mừng <%= user.fullname%> đến với</h1>
+                            <h1 style="padding-left: 1rem;">My Schedule</h1>
+                            <% } else { %>
+                                <h1 class="wc-username">Chào mừng đến với</h1>
+                                <h1 style="padding-left: 1rem;">My Schedule</h1>
+                                <% } %> -->
+
+
+                        <%if ( status==="loggedIn" ){%>
+                            <style>
+                                .wc-username span {
+                                    color: #38afff;
+                                }
+                            </style>
+                            <h1 class="wc-username">Chào mừng <span>
+                                    <%= user.fullname%>
+                                </span> đến với</h1>
+                            <h1 style="padding-left: 1rem;">My Schedule</h1>
+                            <% } else { %>
+                                <h1 class="wc-username">Chào mừng đến với</h1>
+                                <h1 style="padding-left: 1rem;">My Schedule</h1>
+                                <% } %>
+
+                    </div>
+                </div>
+                <div class="left-contents">
+                    <div class="news">
+                        <a href="">
+                            <h4>THÔNG BÁO: Thời gian Đăng ký Tín chỉ Học kỳ 2 Năm học 2022-2023 (16.01.2023)</h4>
+                            <img src="../images/icon-new.gif" alt="">
+                            <h5>BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC DUY TÂN __________ CỘNG HÒA XÃ HỘI CHỦ NGHĨA
+                                VIỆT NAM Độc lập - Tự do - Hạnh phúc __________ Đà Nẵng, ngày 16 tháng 01 năm 2023
+                                THÔNG BÁO Về việc Đăng ký Lớp Học kỳ 2 Năm học 2022-2023 Kính gửi: Lãnh đạo các đơn vị
+                                trong toàn trường...</h5>
+                        </a>
+                    </div>
+                    <div class="news">
+                        <a href="">
+                            <h4>THÔNG BÁO: Thời gian Đăng ký Tín chỉ Học kỳ 2 Năm học 2022-2023 (16.01.2023)</h4>
+                            <img src="../images/icon-new.gif" alt="">
+                            <h5>BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC DUY TÂN __________ CỘNG HÒA XÃ HỘI CHỦ NGHĨA
+                                VIỆT NAM Độc lập - Tự do - Hạnh phúc __________ Đà Nẵng, ngày 16 tháng 01 năm 2023
+                                THÔNG BÁO Về việc Đăng ký Lớp Học kỳ 2 Năm học 2022-2023 Kính gửi: Lãnh đạo các đơn vị
+                                trong toàn trường...</h5>
+                        </a>
+                    </div>
+                    <div class="news">
+                        <a href="">
+                            <h4>THÔNG BÁO: Thời gian Đăng ký Tín chỉ Học kỳ 2 Năm học 2022-2023 (16.01.2023)</h4>
+                            <img src="../images/icon-new.gif" alt="">
+                            <h5>BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC DUY TÂN __________ CỘNG HÒA XÃ HỘI CHỦ NGHĨA
+                                VIỆT NAM Độc lập - Tự do - Hạnh phúc __________ Đà Nẵng, ngày 16 tháng 01 năm 2023
+                                THÔNG BÁO Về việc Đăng ký Lớp Học kỳ 2 Năm học 2022-2023 Kính gửi: Lãnh đạo các đơn vị
+                                trong toàn trường...</h5>
+                        </a>
+                    </div>
+                    <div class="img">
+                        <img src="../images/tải xuống.jpg" alt="" width="200px">
+                    </div>
+                </div>
+            </div>
+            <div class="right-panel">
+                <%if ( status==="loggedIn" ){%>
+                    <div id="user-info">
+                        <div class="user-container">
+                            <img class="user-avt" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+                            <div class="user-text user-fullname">Fullname: <%= user.fullname%>
+                            </div>
+                            <div class="user-text user-dob">Date of Birth: 03/01/1999</div>
+                            <div class="user-text user-addr">Address: 39 Cu Chinh Lan</div>
+                            <div class="buttons">
+                                <a class="button logout-btn" id="logout-btn" href="/logout">Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% } else { %>
+                        <form id="login-form" onsubmit="return false;">
+                            <h2 class="form-title">Đăng nhập</h2>
+                            <label class="text" for="username">Tên đăng nhập:</label>
+                            <input class="input" type="text" id="username" name="username" required>
+                            <label class="text" for="password">Mật khẩu:</label>
+                            <input class="input" type="password" id="password" name="password" required>
+                            <div class="login-info" style="background-color: #69ff62; padding: 1rem; display: none;">
+                            </div>
+                            <div class="buttons">
+                                <button class="button" id="login-btn" type="submit">Đăng nhập</button>
+                            </div>
+                            <div class="register-new">Bạn chưa có tài khoản? <a id="register-link" href="#">Đăng
+                                    ký</a></div>
+                        </form>
+
+                        <form id="register-form" onsubmit="return false;" style="display: none;">
+                            <h2 class=" form-title">Đăng ký</h2>
+                            <label class="text" for="fullname">Họ và tên:</label>
+                            <input class="input" type="text" id="fullname" name="fullname" required>
+                            <label class="text" for="username">Tên tài khoản:</label>
+                            <input class="input" type="text" id="username_register" name="username" required>
+                            <label class="text" for="password">Mật khẩu:</label>
+                            <input class="input" type="password" id="password_register" name="password" required>
+                            <label class="text" for="cf_password">Xác nhận mật khẩu:</label>
+                            <input class="input" type="password" id="cf_password" name="cf_password" required>
+                            <div class="register-info" style="background-color: #69ff62; padding: 1rem; display: none;">
+                                Đăng ký
+                                thành công</div>
+                            <div class=" buttons">
+                                <button class="button" id="register-btn" type="submit">Đăng ký</button>
+                            </div>
+                            <div class="back-to-login">Đã có tài khoản? <a id="login-link" href="#">Đăng nhập</a>
+                            </div>
+                        </form>
+                        <% } %>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="../js/index.js"></script>
+
+</html>
