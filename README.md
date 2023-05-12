@@ -33,6 +33,7 @@ PRIMARY KEY (username)
 # Step 3: Install Dependencies
 
 Install the necessary Node.js libraries by running the following command in your terminal:
+
 ****Make sure you have installed NodeJS before*
 
 ```
