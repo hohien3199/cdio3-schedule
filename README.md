@@ -1,7 +1,5 @@
 # cdio3-schedule
-## Running the Project
-
-### To run project, please follow the steps below:
+## To run project, please follow the steps below:
 
 # Step 1: Create the .env File
 Create a .env file in the root directory of the project and add the following content:
